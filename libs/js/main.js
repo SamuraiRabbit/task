@@ -4,7 +4,7 @@ $('#wikiButton').click(function() {
 	console.log("Wiki Button Clicked.");
 	$.ajax({
 		url: "libs/php/wikipedia.php",
-		type: 'GET',
+		type: 'POST',
 		dataType: 'json',
 		data: {
 			q: $('#selectWikiCity').val()
