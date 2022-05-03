@@ -23,6 +23,7 @@ $('#wikiButton').click(function() {
 		},
 		error: function(jqXHR, textStatus, errorThrown) {
 			console.log("Wiki JSON error!");
+			$("#error-report").html(jqXHR.responseText);
 		}
 	}); 
 	
@@ -53,6 +54,7 @@ $('#oceanButton').click(function() {
 		},
 		error: function(jqXHR, textStatus, errorThrown) {
 			console.log("Ocean JSON error!");
+			$("#error-report").html(jqXHR.responseText);
 		}
 	}); 
 
@@ -86,6 +88,7 @@ $('#addressButton').click(function() {
 		},
 		error: function(jqXHR, textStatus, errorThrown) {
 			console.log("Address JSON error!");
+			$("#error-report").html(jqXHR.responseText);
 		}
 	}); 
 

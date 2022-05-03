@@ -5,7 +5,6 @@
 
     $executionStartTime = microtime(true);
 
-	//$url='http://api.geonames.org/oceanJSON?&formatted=true&lat=1&lng=2&username=samurairabbit&style=full';
     $url='api.geonames.org/oceanJSON?formatted=true&lat=' . $_REQUEST['lat'] . '&lng=' . $_REQUEST['lng'] . '&username=samurairabbit&style=full';
     // creates the cURL object and sets some parameters. These are often documented by the API.
 	$ch = curl_init();
