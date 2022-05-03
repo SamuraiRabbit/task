@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Christian Doyle - API Task</title>
+        <meta name="author" content="Christian Doyle">
+        <meta name="description" content="It Career Switch API Task">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--- <link href="favicon.ico" rel="icon"> --->
+        <link href="libs/css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <h2>Christian Doyle - API Task</h2>
+        </header>
+
+        <main>
+
+            <table>
+                <tr>
+                    <th>API Name</th>
+                    <th>API Description</th>
+                </tr>
+                <tr>
+                    <td>Wikipedia</td>
+                    <td>Returns information from Wikipedia based on the city selected.
+                        <select id="selectWikiCity">
+                            <option value="london">London</option>
+                            <option value="manchester">Manchester</option>
+                            <option value="edinburgh">Edinburgh</option>
+                        </select>
+                    </td>
+                    <td><input type="submit" id="wikiButton"></td>
+                </tr>
+                <tr>
+                    <td>Ocean</td>
+                    <td>Returns the ocean or sea from the given latitude/longitude
+                        <input type="number" id="oceanLat" placeholder="LAT" min="-90" max="90">
+                        <input type="number" id="oceanLng" placeholder="LNG" min="-180" max="180">
+                    </td>
+                        
+                    <td><input type="submit" id="oceanButton"></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>Returns the nearest address to the given latitude/longitude
+                        <input type="number" id="addressLat" placeholder="LAT" min="-90" max="90">
+                        <input type="number" id="addressLng" placeholder="LNG" min="-180" max="180">
+                    </td>
+                    <td><input type="submit" id="addressButton"></td>
+                </tr>
+                <tr>
+            </table>
+
+            <table id="wikiResults">
+                <tr>
+                    <th colspan="2">Wikipedia API Results</th>
+                </tr>
+                <tr>
+                    <td>Title</td>
+                    <td>
+                        <p id="wikiTitle"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Summary</td>
+                    <td>
+                        <p id="wikiSummary"></p>
+                    </td>
+                </tr>
+            </table>
+
+            <table id="oceanResults">
+                <tr>
+                    <th colspan="2">Ocean API Results</th>
+                </tr>
+                <tr>
+                    <td>Title</td>
+                    <td>
+                        <p id="oceanName"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Geoname ID</td>
+                    <td>
+                        <p id="oceanId"></p>
+                    </td>
+                </tr>
+            </table>
+
+            <table id="addressResults">
+                <tr>
+                    <th colspan="2">Address API Results</th>
+                </tr>
+                <tr>
+                    <td>House Number</td>
+                    <td>
+                        <p id="addressHouse"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Street</td>
+                    <td>
+                        <p id="addressStreet"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Locality</td>
+                    <td>
+                        <p id="addressLocality"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Post Code</td>
+                    <td>
+                        <p id="addressPostalcode"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Country</td>
+                    <td>
+                        <p id="addressCountryCode"></p>
+                    </td>
+                </tr>
+            </table>
+
+        </main>
+
+        <footer>
+        </footer>
+
+        <div id="preloader"></div>
+
+        <script src="libs/vendors/jquery/jquery-3.6.0.min.js"></script>
+	    <script src="libs/js/main.js"></script>
+    </body>
+</html>
