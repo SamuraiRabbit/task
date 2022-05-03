@@ -63,7 +63,7 @@ $('#oceanButton').click(function() {
 /*PostalCodes*/
 
 $('#pcButton').click(function() {
-	console.log("Post Code Button Clicked.");
+	console.log("Posal Code Button Clicked.");
 	$.ajax({
 		url: "libs/php/postalCodes.php",
 		type: 'POST',
@@ -78,9 +78,9 @@ $('#pcButton').click(function() {
 
 			if (result.status.name == "ok") {
 
-				$('#pcCountryCode').html(result['data'][0]['countryCode']);
-				$('#pcPlaceName').html(result['data'][0]['placeName']);
-				$('#pcPostalCode').html(result['data'][0]['postalCode']);
+				$('#pcCountryCode').html(result['data'][1]['countryCode']);
+				$('#pcPlaceName').html(result['data'][1]['placeName']);
+				$('#pcPostalCode').html(result['data'][1]['postalCode']);
 			}
 		
 		},
