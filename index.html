@@ -44,12 +44,12 @@
                     <td><input type="submit" id="oceanButton"></td>
                 </tr>
                 <tr>
-                    <td>Address</td>
-                    <td>Returns the nearest address to the given latitude/longitude
-                        <input type="number" id="addressLat" placeholder="LAT" min="-90" max="90">
-                        <input type="number" id="addressLng" placeholder="LNG" min="-180" max="180">
+                    <td>Postal Code</td>
+                    <td>Returns the nearest postal code to the given latitude/longitude
+                        <input type="number" id="pcLat" placeholder="LAT" min="-90" max="90">
+                        <input type="number" id="json" placeholder="LNG" min="-180" max="180">
                     </td>
-                    <td><input type="submit" id="addressButton"></td>
+                    <td><input type="submit" id="pcButton"></td>
                 </tr>
                 <tr>
             </table>
@@ -90,40 +90,29 @@
                 </tr>
             </table>
 
-            <table id="addressResults">
+            <table id="pcResults">
                 <tr>
-                    <th colspan="2">Address API Results</th>
+                    <th colspan="2">Postal Code API Results</th>
                 </tr>
                 <tr>
-                    <td>House Number</td>
+                    <td>Country Code</td>
                     <td>
-                        <p id="addressHouse"></p>
+                        <p id="pcCountryCode"></p>
                     </td>
                 </tr>
                 <tr>
-                    <td>Street</td>
+                    <td>Place Name</td>
                     <td>
-                        <p id="addressStreet"></p>
+                        <p id="pcPlaceName"></p>
                     </td>
                 </tr>
                 <tr>
-                    <td>Locality</td>
+                    <td>Postal Code</td>
                     <td>
-                        <p id="addressLocality"></p>
+                        <p id="pcPostalCode"></p>
                     </td>
                 </tr>
                 <tr>
-                    <td>Post Code</td>
-                    <td>
-                        <p id="addressPostalcode"></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Country</td>
-                    <td>
-                        <p id="addressCountryCode"></p>
-                    </td>
-                </tr>
             </table>
 
         </main>

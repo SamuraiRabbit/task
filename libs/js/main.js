@@ -1,7 +1,7 @@
 /*Wikipedia*/
 
 $('#wikiButton').click(function() {
-	console.log("Wiki Button Clicked.");
+	//console.log("Wiki Button Clicked.");
 	$.ajax({
 		url: "libs/php/wikipedia.php",
 		type: 'POST',
@@ -32,7 +32,7 @@ $('#wikiButton').click(function() {
 /*Ocean*/
 
 $('#oceanButton').click(function() {
-	console.log("Ocean Button Clicked.");
+	//console.log("Ocean Button Clicked.");
 	$.ajax({
 		url: "libs/php/ocean.php",
 		type: 'POST',
@@ -47,8 +47,8 @@ $('#oceanButton').click(function() {
 
 			if (result.status.name == "ok") {
 
-				$('#oceanName').html(result['data'][0]['name']);
-				$('#oceanId').html(result['data'][0]['geonameId']);
+				$('#oceanName').html(result['data']['name']);
+				$('#oceanId').html(result['data']['geonameId']);
 			}
 		
 		},
@@ -60,17 +60,17 @@ $('#oceanButton').click(function() {
 
 });
 
-/*Address*/
+/*PostalCodes*/
 
-$('#addressButton').click(function() {
-	console.log("Address Button Clicked.");
+$('#pcButton').click(function() {
+	console.log("Post Code Button Clicked.");
 	$.ajax({
-		url: "libs/php/address.php",
+		url: "libs/php/postalCodes.php",
 		type: 'POST',
 		dataType: 'json',
 		data: {
-			lat: $('#addressLat').val(),
-			lng: $('#addressLng').val()
+			lat: $('#pcLat').val(),
+			lng: $('#pcLng').val()
 		},
 		success: function(result) {
 
@@ -78,11 +78,9 @@ $('#addressButton').click(function() {
 
 			if (result.status.name == "ok") {
 
-				$('#addressHouse').html(result['data'][0]['houseNumber']);
-				$('#addressStreet').html(result['data'][0]['street']);
-				$('#addressLocality').html(result['data'][0]['locality']);
-				$('#addressPostalcode').attr("href", result['data'][0]['postalcode']);
-				$('#addressCountryCode').attr("href", result['data'][0]['countryCode']);
+				$('#pcCountryCode').html(result['data'][0]['countryCode']);
+				$('#pcPlaceName').html(result['data'][0]['placeName']);
+				$('#pcPostalCode').html(result['data'][0]['postalCode']);
 			}
 		
 		},
